@@ -8,7 +8,7 @@ Computer::Computer(){
 }
 
 char Computer::makeMove(){
-    this->Move = 'R';
+    return 'R';
 }
 
 string Computer::getName(){
