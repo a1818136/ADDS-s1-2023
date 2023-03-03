@@ -25,8 +25,8 @@ Player* Referee::refGame(Player* player1, Player* player2){
         return player2;
     }
     
-    else if (player1->Move == player2->Move){
-        return NULL;
+    else {
+        return player1;
     }
     
 }
