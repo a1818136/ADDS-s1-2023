@@ -6,6 +6,8 @@ using namespace std;
 Referee::Referee(){}
 
 Player* Referee::refGame(Player* player1, Player* player2){
+    player1->makeMove();
+    player2->makeMove();
     if (player1->Move == 'R' && player2->Move == 'S'){
         return player1;
     }
@@ -26,7 +28,7 @@ Player* Referee::refGame(Player* player1, Player* player2){
     }
     
     else {
-        return player1;
+        return NULL;
     }
     
 }
