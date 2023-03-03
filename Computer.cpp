@@ -5,7 +5,6 @@ using namespace std;
 
 Computer::Computer(){
     this->Name = "Computer";
-    this->Move = 'R';
 }
 
 char Computer::makeMove(){
