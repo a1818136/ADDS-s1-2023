@@ -6,29 +6,17 @@ using namespace std;
 Referee::Referee(){}
 
 Player* Referee::refGame(Player* player1, Player* player2){
-    player1->Move = player1->makeMove();
-    player2->Move = player2->makeMove();
-    if (player1->Move == 'R' && player2->Move == 'S'){
+    Move* player1_move = player1->makeMove();
+    Move* player2_move = player2->makeMove();
+
+    if (player1_move->ifWinner(player2_move) == WIN){
         return player1;
     }
-    else if (player1->Move == 'S' && player2->Move == 'P'){
-        return player1;
-    }
-    else if (player1->Move == 'P' && player2->Move == 'R'){
-        return player1;
-    }
-    else if (player1->Move == 'S' && player2->Move == 'R'){
+    else if (player1_move->ifWinner(player2_move) == LOSE){
         return player2;
     }
-    else if (player1->Move == 'P' && player2->Move == 'S'){
-        return player2;
-    }
-    else if (player1->Move == 'R' && player2->Move == 'P'){
-        return player2;
-    }
-    
     else {
         return NULL;
     }
-    
+   
 }

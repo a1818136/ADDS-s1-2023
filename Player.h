@@ -2,13 +2,14 @@
 # define PLAYER_H
 # include <iostream>
 # include <string>
+# include "Move.h"
 
 class Player{
 protected:
-    char Move;
-    std::string Name;
+    char move;
+    std::string name;
 public:
-    virtual char makeMove()=0;
+    virtual Move* makeMove()=0;
     virtual std::string getName()=0;
 };
 

@@ -4,13 +4,14 @@
 using namespace std;
 
 Computer::Computer(){
-    this->Name = "Computer";
+    this->name = "Computer";
 }
 
-char Computer::makeMove(){
-    return 'R';
+Move* Computer::makeMove(){
+    Move* move = new Rock;
+    return move;
 }
 
 string Computer::getName(){
-    return this->Name;
+    return this->name;
 }

@@ -7,6 +7,7 @@
 using namespace std;
 
 int main(){
+    /*
     Player* player1 = new Human;
     Player* player2 = new Computer;
     Referee referee;
@@ -16,6 +17,6 @@ int main(){
     else {
         cout << "It's a Tie" << endl;
     }
-
+*/
 
 }
