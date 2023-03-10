@@ -7,7 +7,7 @@
 class Rock: public Move{
 public:
     Rock();
-    bool ifWinner(Move* Competitor);
+    int ifWinner(Move* Competitor);
 };
 
 # endif
