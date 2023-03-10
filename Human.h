@@ -3,13 +3,12 @@
 # include <iostream>
 # include <string>
 # include "Player.h"
-using namespace std;
 class Human: public Player{
 public:
     Human();
-    Human(string name);
-    char makeMove();
-    string getName();
+    Human(std::string name);
+    charS makeMove();
+    std::string getName();
 };
 
 #endif
