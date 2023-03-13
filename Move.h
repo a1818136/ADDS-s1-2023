@@ -1,5 +1,6 @@
 # ifndef MOVE_H
 # define MOVE_H
+# include <iostream>
 # include <string>
 # define WIN 0
 # define LOSE 1
