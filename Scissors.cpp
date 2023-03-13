@@ -1,5 +1,3 @@
-# include <iostream>
-# include <string>
 # include "Scissors.h"
 using namespace std;
 

@@ -1,6 +1,5 @@
 # ifndef COMPUTER_H
 # define COMPUTER_H
-# include <iostream>
 # include <string>
 # include "Player.h"
 # include "Move.h"

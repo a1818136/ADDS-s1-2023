@@ -1,5 +1,3 @@
-# include <iostream>
-# include <string>
 # include "Paper.h"
 using namespace std;
 

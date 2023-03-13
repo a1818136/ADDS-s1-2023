@@ -1,5 +1,3 @@
-# include <iostream>
-# include <string>
 # include "Zombie.h"
 using namespace std;
 

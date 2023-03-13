@@ -1,5 +1,3 @@
-# include <iostream>
-# include <string>
 # include "Monkey.h"
 using namespace std;
 

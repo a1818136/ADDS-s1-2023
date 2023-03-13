@@ -1,6 +1,5 @@
 # ifndef NINJA_H
 # define NINJA_H
-# include <iostream>
 # include <string>
 # include "Move.h"
 

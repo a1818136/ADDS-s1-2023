@@ -13,7 +13,6 @@
 # include "Robot.h"
 # include "Zombie.h"
 
-
 class Human: public Player{
 public:
     Human();

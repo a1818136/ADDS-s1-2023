@@ -1,5 +1,3 @@
-# include <iostream>
-# include <string>
 # include "Pirate.h"
 using namespace std;
 

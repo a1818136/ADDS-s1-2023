@@ -1,6 +1,5 @@
 # ifndef SCISSORS_H
 # define SCISSORS_H
-# include <iostream>
 # include <string>
 # include "Move.h"
 

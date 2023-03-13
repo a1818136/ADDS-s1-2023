@@ -1,5 +1,3 @@
-# include <iostream>
-# include <string>
 # include "Robot.h"
 using namespace std;
 

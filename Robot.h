@@ -1,6 +1,5 @@
 # ifndef ROBOT_H
 # define ROBOT_H
-# include <iostream>
 # include <string>
 # include "Move.h"
 

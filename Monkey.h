@@ -1,6 +1,5 @@
 # ifndef MONKEY_H
 # define MONKEY_H
-# include <iostream>
 # include <string>
 # include "Move.h"
 
