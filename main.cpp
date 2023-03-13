@@ -8,12 +8,11 @@ int main(){
     Player* player1 = new Human;
     Player* player2 = new Computer;
     Referee referee;
-    
-    if (referee.refGame(player1, player2) != NULL){
-        cout << referee.refGame(player1, player2)->getName() << " Wins" << endl;
+    Player* winner = referee.refGame(player1, player2);
+    if (winner != NULL){
+        cout << winner->getName() << " Wins" << endl;
     }
     else {
         cout << "It's a Tie" << endl;
     }
-
 }
