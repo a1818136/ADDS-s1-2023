@@ -1,9 +1,17 @@
 # include "Reverser.h"
 using namespace std;
 
-int  Reverser::reverseDigit(int value){
-    return 1;
+int Reverser::reverseDigit(int value, int result){
+    if (value == 0){
+        return result;
+    }
+    return reverseDigit(value/10, result*10 + value%10);
 }
+
+int Reverser::reverseDigit(int value){
+    return reverseDigit(value, 0);
+}
+
 
 string Reverser::reverseString(string characters, string result){
     if (characters.length() <= 1){
