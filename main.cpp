@@ -6,5 +6,5 @@ int main(){
     std::cout << a.reverseString("abcde") << std::endl;
     std::cout << a.reverseDigit(12345) << std::endl;
     Truckloads b;
-    std::cout << b.numberTrucks(15,3) << std::endl;
+    std::cout << b.numTrucks(15,3) << std::endl;
 }

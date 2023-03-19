@@ -3,9 +3,9 @@
 
 class Truckloads{
 private:
-    int numberTrucks(int numCrates, int loadSize, int numPiles);
+    int numTrucks(int numCrates, int loadSize, int numPiles);
 public:
-    int numberTrucks(int numCrates, int loadSize);
+    int numTrucks(int numCrates, int loadSize);
 };
 
 # endif

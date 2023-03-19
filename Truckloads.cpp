@@ -1,6 +1,6 @@
 # include "Truckloads.h"
 
-int Truckloads::numberTrucks(int numCrates, int loadSize, int numPiles){
+int Truckloads::numTrucks(int numCrates, int loadSize, int numPiles){
     int cratesPerTruck = numCrates/numPiles;
     int cratesRemain = numCrates%numPiles;
     int newNumPiles;
@@ -15,9 +15,9 @@ int Truckloads::numberTrucks(int numCrates, int loadSize, int numPiles){
         newNumPiles = numPiles + cratesRemain;
     }
     
-    return numberTrucks(numCrates, loadSize, newNumPiles);
+    return numTrucks(numCrates, loadSize, newNumPiles);
 }
 
-int Truckloads::numberTrucks(int numCrates, int loadSize){
-    return numberTrucks(numCrates, loadSize, 1);
+int Truckloads::numTrucks(int numCrates, int loadSize){
+    return numTrucks(numCrates, loadSize, 1);
 }
