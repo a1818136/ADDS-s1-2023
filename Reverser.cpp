@@ -9,6 +9,7 @@ int Reverser::reverseDigit(int value, int result){
 }
 
 int Reverser::reverseDigit(int value){
+    if (value < 0) return -1;
     return reverseDigit(value, 0);
 }
 
@@ -21,5 +22,6 @@ string Reverser::reverseString(string characters, string result){
 }
 
 string Reverser::reverseString(string characters){
+    if (characters == "") return "ERROR";
     return reverseString(characters, "");
 }
