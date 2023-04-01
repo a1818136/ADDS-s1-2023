@@ -13,10 +13,6 @@
             } 
             else {
                 result.push_back(-1);
-                for (size_t j = i + 1; j<=s2.size(); j++){
-                    result.push_back(-1);
-                }
-                i = s2.size() + 1;
             }
         }
         return result;
