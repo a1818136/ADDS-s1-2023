@@ -7,7 +7,7 @@
         vector<int> result;
 
         for(size_t i = 1; i <= s2.size(); i++) {
-            size_t found = s1.find(s2.substr(0, i), result.at(result.size()-1));
+            size_t found = s1.find(s2.substr(0, i));
             if (found != string::npos) {
                 result.push_back(found);
             } 
