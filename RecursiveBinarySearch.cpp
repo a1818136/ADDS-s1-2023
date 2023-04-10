@@ -7,7 +7,7 @@ bool RecursiveBinarySearch::search(std::vector<int>& list, int l, int r, int t) 
 
     int m = l+(r-l)/2;
     if (list[m] == t) {
-        return m;
+        return true;
     } 
     else if (list[m] > t) {
         return search(list, l, m - 1, t);
@@ -18,5 +18,6 @@ bool RecursiveBinarySearch::search(std::vector<int>& list, int l, int r, int t) 
 }
 
 bool RecursiveBinarySearch::search(std::vector<int> list, int t){
-    return this->search(list, 0, list.size()-1, t);
+    std::vector<int> list1 =list;
+    return this->search(list1, 0, list.size()-1, t);
 }
