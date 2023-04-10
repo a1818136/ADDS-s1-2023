@@ -8,9 +8,9 @@ vector<int> BubbleSort::sort(vector<int> list){
     for (int i=1; i<length; i++){
         for (int j=0; j<length-i; j++){
             if (list1.at(j) > list1.at(j+1)){
-                list1.at(j) = temp;
-                list1.at(j) = list1.at(j+1);
-                list1.at(j+1) = temp;
+                temp = list1.at(j);
+                list1.at(j) = list1[j+1];
+                list1[j+1] = temp;
             }
         }
     }

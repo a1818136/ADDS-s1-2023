@@ -2,7 +2,34 @@
 using namespace std;
 
 void QuickSort::sort(std::vector<int>& list, int l, int r){
-    if (list.size() <= 1) return ;
+    if (l >= r) return ; 
+
+    int pivot;
+    if (r-l >= 2) {
+        pivot = list[l+2];
+    } else {
+        pivot = list[r];
+    }
+    
+    int i = l, j = r;
+    while (i <= j){
+        while (list[i] < pivot){
+            i++;
+        }
+        while (list[j] > pivot){
+            j--;
+        }
+        if (i <= j){
+            swap(list[i], list[j]);
+            i++;
+            j--;
+        }
+    }
+
+    sort(list, l, j);
+    sort(list, i, r);
+    /*
+    if (l>=r) return ;
 
     int pivot, pos, j;
     int i = l;
@@ -29,7 +56,7 @@ void QuickSort::sort(std::vector<int>& list, int l, int r){
     }
     swap(list[pos], list[i]);
     sort(list, l, j - 1);
-    sort(list, j + 1, r);
+    sort(list, i + 1, r);*/
 }
 
 vector<int> QuickSort::sort(std::vector<int> list){
