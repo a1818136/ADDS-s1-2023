@@ -3,6 +3,7 @@
 # include <iostream>
 using namespace std;
 int main(){
+    /*
     BubbleSort a;
     QuickSort b;
     vector<int> list ={2,5,3,7,1};
@@ -10,4 +11,5 @@ int main(){
     for (int i; i<5; i++){
         cout<< l[i]<< " ";
     }
+    */
 }
