@@ -1,5 +1,6 @@
-#include "linkedlist.h"
+#include "LinkedList.h"
 #include <iostream>
+#include <limits>
 
 LinkedList::LinkedList() {
     head = nullptr;
@@ -29,13 +30,15 @@ void LinkedList::insertPosition(int pos, int newNum){
 
     // if inserting out of bounds, abort
     if (prevNode == nullptr) {
-        int i = 2;
-        while(prevNode != nullptr){
-            Node *prevNode = traverse(pos-i);
-            i++;
+        int position = 0;
+        Node* currNode = head;
+        while (currNode != nullptr) {
+            position++;
+            currNode = currNode->link;
         }
+        prevNode = traverse(position);
     }
-
+    
     Node *newNode  = new Node(newNum, prevNode->link);
     prevNode->link = newNode;
     return;
@@ -97,19 +100,19 @@ int LinkedList::search(int target){
 
 void LinkedList::printList() {
     Node* currNode = head; 
-    std::cout << currNode->data;
+    std::cout << "[" << currNode->data;
     currNode = currNode->link; 
     while (currNode != nullptr) { 
-        std::cout << " and " << currNode->data; 
+        std::cout << " " << currNode->data; 
         currNode = currNode->link; 
     } 
-    std::cout << std::endl; 
+    std::cout << "]" <<std::endl; 
 }
 
 
 
 Node* LinkedList::traverse(unsigned int index) {
-    unsigned int position = 0;
+    unsigned int position = 1;
     Node* currNode = head; 
 
     while (currNode != nullptr && position < index) { 
