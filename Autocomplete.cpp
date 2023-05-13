@@ -7,9 +7,6 @@ using namespace std;
 
 Autocomplete::Autocomplete(){
     this->root = new TrieNode;
-    this->insert("bin");
-    this->insert("ball");
-    this->insert("ballet");
 }
 
 std::vector<std::string> Autocomplete::getSuggestions(std::string partialWord){
