@@ -12,7 +12,7 @@ int kth_largest(std::vector<int> values, int k) {
     }
   }
 
-  int result = -1;
+  int result;
   for (int i=0; i<k; i++) {
     if (minHeap.empty()) {
       break; 
