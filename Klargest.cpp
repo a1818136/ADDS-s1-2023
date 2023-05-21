@@ -11,7 +11,6 @@ int kth_largest(std::vector<int> values, int k) {
       index = (index-1)/2;
     }
   }
-
   int result;
   for (int i=0; i<k; i++) {
     if (minHeap.empty()) {
