@@ -58,12 +58,16 @@ template <typename T>
 void Heap<T>::insert(T value) {
   values.push_back(value);
   int index = values.size()-1;
-  int parent_index = floor((index-1/2));
 
-  while (index>0 && values[index]<values[parent_index]) {
-    std::swap(values[index], values[parent_index]);
-    index = parent_index;
-    parent_index = floor((index-1)/2);
+  while (index > 0) {
+    int parent_index = floor((index-1)/2);
+    if (values[index] < values[parent_index]) {
+      T temp = values[index];
+      values[index] = values[parent_index];
+      values[parent_index] = temp;
+      index = parent_index;
+    } 
+    else break; 
   }
 }
 
@@ -80,7 +84,7 @@ void Heap<T>::remove(T value){
       break;
     }
   }
-  
+
   if (index == -1) {
     return ;
   }
