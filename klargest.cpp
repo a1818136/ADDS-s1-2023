@@ -1,6 +1,6 @@
-#include <vector>
-#include <iostream>
-#include <queue>
+# include <vector>
+# include <iostream>
+# include <queue>
 using namespace std;
 
 int kth_largest(std::vector<int> values, int k) {
