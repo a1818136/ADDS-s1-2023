@@ -60,7 +60,6 @@ void Heap<T>::insert(T value) {
   int index = values.size()-1;
   int parent_index = floor((index-1/2));
 
-  // Swap the value with its parent until it's in the correct position
   while (index>0 && values[index]<values[parent_index]) {
     std::swap(values[index], values[parent_index]);
     index = parent_index;
@@ -81,9 +80,11 @@ void Heap<T>::remove(T value){
       break;
     }
   }
+  
   if (index == -1) {
     return ;
   }
+
   int last_index = values.size()-1;
   values[index] = values[last_index];
   values.pop_back();
