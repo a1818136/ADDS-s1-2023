@@ -59,7 +59,7 @@ void Heap<T>::insert(T value) {
   values.push_back(value);
   int index = values.size()-1;
 
-  while (index > 0) {
+  while (index>0) {
     int parent_index = floor((index-1)/2);
     if (values[index] < values[parent_index]) {
       T temp = values[index];
