@@ -39,8 +39,6 @@ bool DocumentManager::borrowDocument(int docid, int patronID) {
         return false;
 
     auto got = collection.find(docid);
-
-    unordered_map<int, Document>::const_iterator got = collection.find(docid);
     Document& doc = got->second;
     if (doc.number_borrowed >= doc.license_limit)
         return false;
@@ -60,13 +58,10 @@ void DocumentManager::returnDocument(int docid, int patronID) {
     }
 
     if (!patronID_found)
-        return;
+        return ;
 
     auto got = collection.find(docid);
-    if (got == collection.end())
-        return;
-
     Document& doc = got->second;
     doc.number_borrowed--;
-    return;
+    return ;
 }
