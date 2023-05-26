@@ -27,16 +27,7 @@ int DocumentManager::search(string name) {
 }
 
 bool DocumentManager::borrowDocument(int docid, int patronID) {
-    bool patronID_found = false;
-    for (int i : patrons) {
-        if (i == patronID) {
-            patronID_found = true;
-            break;
-        }
-    }
-
-    if (!patronID_found)
-        return false;
+    
 
     auto got = collection.find(docid);
     Document& doc = got->second;
