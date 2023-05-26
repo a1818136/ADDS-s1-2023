@@ -9,7 +9,7 @@ void DocumentManager::addDocument(std::string name, int id, int license_limit) {
     new_doc.id = id;
     new_doc.name = name;
     new_doc.license_limit = license_limit;
-    new_doc.number_borrowed = license_limit;
+    new_doc.number_borrowed = 0;
     collection.insert({id, new_doc});
     name2id.insert({name, id});
 }
@@ -27,7 +27,16 @@ int DocumentManager::search(string name) {
 }
 
 bool DocumentManager::borrowDocument(int docid, int patronID) {
-    
+    bool patronID_found = false;
+    for (int i : patrons) {
+        if (i == patronID) {
+            patronID_found = true;
+            break;
+        }
+    }
+
+    if (!patronID_found)
+        return false;
 
     auto got = collection.find(docid);
     Document& doc = got->second;
