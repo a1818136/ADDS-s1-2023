@@ -41,7 +41,7 @@ bool DocumentManager::borrowDocument(int docid, int patronID) {
     if (got == collection.end())
         return false;
 
-    Document doc = got->second;
+    Document& doc = got->second;
     if (doc.number_borrowed >= doc.license_limit)
         return false;
     else {
