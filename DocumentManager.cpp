@@ -51,6 +51,17 @@ bool DocumentManager::borrowDocument(int docid, int patronID) {
 }
 
 void DocumentManager::returnDocument(int docid, int patronID) {
+    bool patronID_found = false;
+    for (auto i : patrons) {
+        if (i == patronID) {
+            patronID_found = true;
+            break;
+        }
+    }
+
+    if (!patronID_found)
+        return;
+
     auto got = collection.find(docid);
     if (got == collection.end())
         return;
