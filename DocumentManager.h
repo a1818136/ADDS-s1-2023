@@ -13,8 +13,8 @@ struct Document{
 
 class DocumentManager{
 private:
-    unordered_map<int, Document> collection;
-    unordered_map<std::string, int> name2id;
+    std::unordered_map<int, Document> collection;
+    std::unordered_map<std::string, int> name2id;
     std::vector<int> patrons;
 public:
     DocumentManager();
