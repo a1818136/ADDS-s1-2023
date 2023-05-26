@@ -29,7 +29,7 @@ int DocumentManager::search(string name) {
 bool DocumentManager::borrowDocument(int docid, int patronID) {
     bool patronID_found = false;
     for (auto i : patrons) {
-        if (patrons.at(i) == patronID)
+        if (patrons[i] == patronID)
             patronID_found = true;
     }
 
@@ -52,7 +52,7 @@ bool DocumentManager::borrowDocument(int docid, int patronID) {
 void DocumentManager::returnDocument(int docid, int patronID) {
     bool patronID_found = false;
     for (auto i : patrons) {
-        if (patrons.at(i) == patronID)
+        if (patrons[i] == patronID)
             patronID_found = true;
     }
 
