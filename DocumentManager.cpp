@@ -38,8 +38,6 @@ bool DocumentManager::borrowDocument(int docid, int patronID) {
         return false;
 
     auto got = collection.find(docid);
-    if (got == collection.end())
-        return false;
 
     Document& doc = got->second;
     if (doc.number_borrowed >= doc.license_limit)
