@@ -66,7 +66,7 @@ void DocumentManager::returnDocument(int docid, int patronID) {
     if (got == collection.end())
         return;
 
-    Document doc = got->second;
+    Document& doc = got->second;
     if (doc.number_borrowed <= 0)
         return;
     else {
