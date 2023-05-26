@@ -27,7 +27,7 @@ int DocumentManager::search(string name) {
 }
 
 bool DocumentManager::borrowDocument(int docid, int patronID) {
-    bool patronID_found = true;
+    bool patronID_found = false;
     for (int i : patrons) {
         if (i == patronID) {
             patronID_found = true;
@@ -40,6 +40,7 @@ bool DocumentManager::borrowDocument(int docid, int patronID) {
 
     auto got = collection.find(docid);
 
+    unordered_map<int, Document>::const_iterator got = collection.find(docid);
     Document& doc = got->second;
     if (doc.number_borrowed >= doc.license_limit)
         return false;
@@ -66,10 +67,6 @@ void DocumentManager::returnDocument(int docid, int patronID) {
         return;
 
     Document& doc = got->second;
-    if (doc.number_borrowed <= 0)
-        return;
-    else {
-        doc.number_borrowed--;
-        return;
-    }
+    doc.number_borrowed--;
+    return;
 }
