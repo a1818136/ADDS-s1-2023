@@ -27,10 +27,11 @@ int DocumentManager::search(string name) {
 }
 
 bool DocumentManager::borrowDocument(int docid, int patronID) {
-    bool patronID_found = false;
+    bool patronID_found = true;
     for (int i : patrons) {
         if (i == patronID) {
             patronID_found = true;
+            break;
         }
     }
 
