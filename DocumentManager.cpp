@@ -29,10 +29,8 @@ int DocumentManager::search(string name) {
 bool DocumentManager::borrowDocument(int docid, int patronID) {
     bool patronID_found = false;
     for (auto i : patrons) {
-        if (i == patronID) {
+        if (patrons.at(i) == patronID)
             patronID_found = true;
-            break;
-        }
     }
 
     if (!patronID_found)
@@ -42,7 +40,7 @@ bool DocumentManager::borrowDocument(int docid, int patronID) {
     if (got == collection.end())
         return false;
 
-    Document& doc = got->second;
+    Document doc = got->second;
     if (doc.number_borrowed >= doc.license_limit)
         return false;
     else {
@@ -54,10 +52,8 @@ bool DocumentManager::borrowDocument(int docid, int patronID) {
 void DocumentManager::returnDocument(int docid, int patronID) {
     bool patronID_found = false;
     for (auto i : patrons) {
-        if (i == patronID) {
+        if (patrons.at(i) == patronID)
             patronID_found = true;
-            break;
-        }
     }
 
     if (!patronID_found)
@@ -67,7 +63,7 @@ void DocumentManager::returnDocument(int docid, int patronID) {
     if (got == collection.end())
         return;
 
-    Document& doc = got->second;
+    Document doc = got->second;
     if (doc.number_borrowed <= 0)
         return;
     else {
